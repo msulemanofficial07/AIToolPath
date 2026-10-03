@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+# Add a Sitemap directive with the final public domain after deployment.
