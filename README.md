@@ -1,22 +1,21 @@
 # AIToolPath
 
-A lightweight static site for discovering and comparing AI tools. The homepage directory and advisor run without a build step, database, API key, or paid service. Editorial guides are individual, crawlable HTML pages; the task-based comparison tool runs in the browser.
+A lightweight static editorial site centered on five personal AI-tool reviews, a focused tool directory, and practical guides. It needs no build step, database, API key, or paid service; two-tool comparison runs in the browser.
 
 ## Run locally
 
-Open `index.html` or `compare.html` in a current browser. Search, category filters, role-based profiles, tool detail dialogs, two-tool comparison, and the rule-based advisor work in the browser. The profile cards include externally hosted Unsplash photos; those images need an internet connection. A local static web server can also serve the files for testing.
+Open `index.html`, `top-ai-tools.html`, or `compare.html` in a current browser. The homepage features the author's five personal reviews and a focused five-tool directory with search and category filters; the separate Top 15 guide covers a broader range of everyday work. Two-tool comparison works in the browser. A local static web server can also serve the files for testing.
 
-The review pages describe the author's stated experience as a freelancer and student; they are qualitative, not controlled benchmark results. Model names, pricing, features, availability, and terms change and must be checked against linked official sources. The advisor is not an AI service and does not verify provider data.
+The review pages describe the author's stated experience as a freelancer and student; they are qualitative, not controlled benchmark results. Model names, pricing, features, availability, and terms change and must be checked against linked official sources.
 
 ## Edit the content
 
 - Edit the `tools` array in `index.html` to change names, descriptions, categories, use-case keywords, audiences, and limitation notes.
+- Edit `top-ai-tools.html` to update the 15-tool editorial roundup, table of contents, and official provider links.
 - Edit `compare.js` to add comparison candidates or update task-fit guidance and official provider links.
 - Keep each tool's `id` stable and unique. Add its provider homepage to the `officialSites` map; these links are direct links, not affiliate links.
 - Edit the `categories` array to add a category. Directory filters and category buttons are generated from it.
-- Edit the `profiles` array to change role-based discovery, skill tags, profile photos, and each role's ordered `recommended` tool IDs. Keep recommendation IDs in sync with the catalog.
 - Edit the `expertise` field on each tool to explain its strongest practical use; this text appears on tool cards, profiles, and comparisons.
-- Update the advisor's task matching only when the corresponding catalog data is maintained. Do not treat unverified pricing or requirements as confirmed matches.
 
 ## Brand and layout
 
