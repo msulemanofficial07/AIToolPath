@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-# Add a Sitemap directive with the final public domain after deployment.
+Sitemap: https://msulemanofficial07.github.io/AIToolPath/sitemap.xml
