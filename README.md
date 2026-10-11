@@ -1,16 +1,17 @@
 # AIToolPath
 
-A lightweight, single-file prototype for discovering and comparing AI tools. It runs without a build step, database, API key, or paid service.
+A lightweight static site for discovering and comparing AI tools. The homepage directory and advisor run without a build step, database, API key, or paid service. Editorial guides are individual, crawlable HTML pages; the task-based comparison tool runs in the browser.
 
 ## Run locally
 
-Open `index.html` in a current browser. Search, category filters, role-based profile filters, tool detail dialogs, two-tool comparison, and the rule-based advisor work entirely in the browser. The profile cards include externally hosted Unsplash photos; those images need an internet connection. A local static web server can also serve the file for testing.
+Open `index.html` or `compare.html` in a current browser. Search, category filters, role-based profiles, tool detail dialogs, two-tool comparison, and the rule-based advisor work in the browser. The profile cards include externally hosted Unsplash photos; those images need an internet connection. A local static web server can also serve the files for testing.
 
-The tool catalog is demonstration content. Pricing, feature availability, platforms, official links, and editorial claims must be checked before publishing. The advisor is not an AI service and does not verify provider data.
+The review pages describe the author's stated experience as a freelancer and student; they are qualitative, not controlled benchmark results. Model names, pricing, features, availability, and terms change and must be checked against linked official sources. The advisor is not an AI service and does not verify provider data.
 
 ## Edit the content
 
 - Edit the `tools` array in `index.html` to change names, descriptions, categories, use-case keywords, audiences, and limitation notes.
+- Edit `compare.js` to add comparison candidates or update task-fit guidance and official provider links.
 - Keep each tool's `id` stable and unique. Add its provider homepage to the `officialSites` map; these links are direct links, not affiliate links.
 - Edit the `categories` array to add a category. Directory filters and category buttons are generated from it.
 - Edit the `profiles` array to change role-based discovery, skill tags, profile photos, and each role's ordered `recommended` tool IDs. Keep recommendation IDs in sync with the catalog.
@@ -23,21 +24,21 @@ The CSS variables near the top of the `<style>` block control the palette, conte
 
 ## Search and SEO
 
-The current search is client-side and keyword/use-case based. It is appropriate for a small demo catalog, not a replacement for indexed database search at scale. Before production, choose a canonical domain, set the canonical and social metadata, create a sitemap containing only live public URLs, and replace the demo's generic page metadata with route-specific titles and descriptions. Tool dialogs are not individual indexable tool pages; production SEO pages need real routes and unique, verified content.
+The directory search is client-side and keyword/use-case based. The individual review and guide pages have unique titles, descriptions, canonical/social metadata, article structured data, contextual internal links, and reserved ad placements. `sitemap.xml` and `robots.txt` use the GitHub Pages project URL documented below; update both, all canonical URLs, and Open Graph URLs if the production domain or repository path changes. Keep sitemap entries limited to live public pages. Organic search visibility and traffic are not guaranteed by page count or metadata alone; publish original, maintained content and validate the domain in Search Console.
 
-`robots.txt` currently permits crawling. Add its sitemap URL after deploying to the final domain. Do not submit placeholder or private URLs to search engines.
+`robots.txt` currently permits crawling and lists the project sitemap URL. Confirm that sitemap URL matches the final public domain and repository path before submitting it to search engines. Do not submit placeholder or private URLs.
 
 ## Monetization and trust
 
-No ads, affiliate tracking, sponsored placements, or newsletter sign-up are active. The directory includes one visibly identified reserved ad location. Add commercial links only after joining a program, label commission-earning links and sponsorship clearly, and keep editorial comparisons independent. Advertising and affiliate revenue are not guaranteed.
+No ad network, affiliate tracking, sponsored placement, or newsletter sign-up is active. The homepage and editorial pages contain visibly identified reserved ad locations; these are placeholders, not live ads. Add provider-issued ad code or approved affiliate links only after the relevant account/program is active, label commercial relationships clearly, and keep editorial comparisons independent. Advertising and affiliate revenue are not guaranteed.
 
 ## Deploy
 
 This is static HTML and can be deployed to GitHub Pages, Netlify, Cloudflare Pages, or another static host. `index.html` must be at the published site's root so the root URL has a default page.
 
-To publish at `https://msulemanofficial07.github.io/`, create a public GitHub repository named `msulemanofficial07.github.io` (or rename the current `AIToolPath` repository), then put this folder's files at the repository root and push them to `main`. This project includes a GitHub Actions workflow that deploys `index.html` and `robots.txt` on each push. In the repository's **Settings → Pages**, set the build and deployment source to **GitHub Actions**. A repository named `AIToolPath` instead publishes as a project site at `https://msulemanofficial07.github.io/AIToolPath/`; it cannot serve the account-root URL.
+The canonical URLs and sitemap currently target the GitHub Pages project URL `https://msulemanofficial07.github.io/AIToolPath/`. For that deployment, publish the contents of this folder at the root of a repository named `AIToolPath` and configure a GitHub Pages deployment source in **Settings → Pages**. No deployment workflow is included in this folder; configure the deployment workflow or another supported publishing source for the repository. A repository named `msulemanofficial07.github.io` instead publishes at the account-root URL, so update the canonical, Open Graph, sitemap, and robots URLs if you choose it.
 
-After publishing, verify the Actions deployment succeeds and open the published URL. For another domain, connect it in the host's settings, enable HTTPS, then update canonical metadata and sitemap references to the real domain. Verify mobile layouts and every outbound link after publishing.
+After publishing, verify the deployment succeeds and open the published URL. For another domain, connect it in the host's settings, enable HTTPS, then update canonical metadata and sitemap references to the real domain. Verify mobile layouts and every outbound link after publishing.
 
 ## Future integrations
 
