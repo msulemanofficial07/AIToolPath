@@ -1,4 +1,4 @@
-# AIToolPath
+# Best AI Tool Path
 
 A lightweight static editorial site centered on five personal AI-tool reviews, a focused tool directory, and practical guides. It needs no build step, database, API key, or paid service; two-tool comparison runs in the browser.
 
@@ -35,7 +35,7 @@ No ad network, affiliate tracking, sponsored placement, or newsletter sign-up is
 
 This is static HTML and can be deployed to GitHub Pages, Netlify, Cloudflare Pages, or another static host. `index.html` must be at the published site's root so the root URL has a default page.
 
-The canonical URLs and sitemap currently target the GitHub Pages project URL `https://msulemanofficial07.github.io/AIToolPath/`. For that deployment, publish the contents of this folder at the root of a repository named `AIToolPath` and configure a GitHub Pages deployment source in **Settings → Pages**. No deployment workflow is included in this folder; configure the deployment workflow or another supported publishing source for the repository. A repository named `msulemanofficial07.github.io` instead publishes at the account-root URL, so update the canonical, Open Graph, sitemap, and robots URLs if you choose it.
+The canonical URLs and sitemap currently target the GitHub Pages project URL `https://msulemanofficial07.github.io/AIToolPath/`. For that deployment, publish the contents of this folder at the root of a repository named `Best AI Tool Path` and configure a GitHub Pages deployment source in **Settings → Pages**. No deployment workflow is included in this folder; configure the deployment workflow or another supported publishing source for the repository. A repository named `msulemanofficial07.github.io` instead publishes at the account-root URL, so update the canonical, Open Graph, sitemap, and robots URLs if you choose it.
 
 After publishing, verify the deployment succeeds and open the published URL. For another domain, connect it in the host's settings, enable HTTPS, then update canonical metadata and sitemap references to the real domain. Verify mobile layouts and every outbound link after publishing.
 
